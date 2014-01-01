@@ -7,9 +7,12 @@ int main (int argc, char* argv[])
 	freopen(argv[1], "r", stdin);
 	int n;
 	while(cin >> n) {
-		int step[3] = {1, 2};
+		long long step[3] = {1, 2};
 		if(n <= 2) {
-			cout << step[n-1] << endl;
+			if(n <= 0)
+				cout << "0" << endl;
+			else
+				cout << step[n-1] << endl;
 			continue;
 		}
 		for(int i=1; i<n-1; i++){

@@ -15,7 +15,8 @@ int main (int argc, char* argv[])
 			continue; //ignore all empty lines
 		else {
 			int n;
-			int step[3] = {1,2};
+			string step[3] = {"1", "2"};
+			//cout << lineBuffer << endl;
 			sscanf(lineBuffer.c_str(), "%d", &n);
 			if(n <= 2) {
 				cout << step[n-1] << endl;
@@ -26,6 +27,7 @@ int main (int argc, char* argv[])
 				step[0] = step[1];
 				step[1] = step[2];
 			}
+			
 			cout << step[2] << endl;
 		}
 	}
